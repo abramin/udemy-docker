@@ -10,3 +10,13 @@ before_install:
 
 script:
   - docker run -e CI=true raminblair/udemy-docker npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-3"
+  app: "udemy-docker"
+  env: "Udemydocker-env"
+  bucket_name: "elasticbeanstalk-eu-west-3-021879667984"
+  bucket_path: "udemy-docker"
+  on:
+    branch: master
