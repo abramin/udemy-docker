@@ -19,4 +19,6 @@ deploy:
   bucket_name: "elasticbeanstalk-eu-west-3-021879667984"
   bucket_path: "udemy-docker"
   on:
-    branch: master
+    branch: main
+  access_key_id: $AWS_ACCESS_ID
+  secret_access_key: $AWS_SECRET_KEY
